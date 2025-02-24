@@ -1,0 +1,97 @@
+:root {
+    --main-color: #7e4a35;
+    --secondary-color: #cab577;
+    --text-color: #dbceb0;
+    --background-color:#838060;
+    --font-size-large: 70px;
+    --font-size-med: 30px;
+    --font-size-small:15px;
+    --font-family-header: Verdana, Arial, Helvetica, sans-serif;
+    --font-family-par: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+   
+    text-align: center;
+    font-weight: bold;
+   font-size: var(--font-size-large);
+   color: var(--text-color);
+    padding: 20px;
+    
+}
+h1 
+{
+    font-family: var(--font-family-header);
+    border-bottom: 5px solid  rgba(0, 0, 0, 0.247) 
+}
+nav ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    margin:20px;
+    list-style: none;
+   
+}
+
+nav ul li {
+    border-radius: 10px;
+    background-color: var(--main-color);
+    width: 500px ;
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li:hover{
+    background-color:rgba(163, 98, 54, 0.785);
+    cursor: pointer;
+}
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+section {
+    font-family: var(--font-family-par);
+    font-size: var(--font-size-med);
+    color: var(--text-color);
+    padding: 20px;
+    margin: 20px;
+}
+#about
+{
+    border-radius: 20px;
+    background-color: #7e4a35a1;
+    text-align:  center;
+    padding:20px;
+    
+
+}
+#projects 
+{
+    
+    text-align:  center;
+    padding: 20px;
+}
+#contact
+{
+    text-align:  center;
+    padding: 50px
+}
+footer {
+    font-size: 20px;
+    background-color:var(--main-color);
+    color: var(--text-color);
+    text-align: right;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
