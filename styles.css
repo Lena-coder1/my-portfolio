@@ -8,13 +8,17 @@
     --font-size-small:12px;
     --font-family-header: Verdana, Arial, Helvetica, sans-serif;
     --font-family-par: Georgia, 'Times New Roman', Times, serif;
+    --padding-large: 20px;
+    --padding-med: 10px;
+    --border-radius: 20px;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* General Styles */
 body {
   
     margin: 0;
-    padding: 0;
+    padding: 0 0 60px;
     background-color: #f4f4f4;
     line-height: 1.6;
    
@@ -24,10 +28,11 @@ header {
     background-color: #333;
     text-align: center;
     font-weight: bold;
-   font-size: var(--font-size-large);
-   color: var(--text-color);
-    padding: 20px;
-    
+    font-size: var(--font-size-large);
+    color: var(--text-color);
+    padding: var(--padding-large);
+    width: 100%;
+    z-index: 1000;
 }
 h1 
 {
@@ -45,9 +50,9 @@ nav ul {
 }
 
 nav ul li {
-    border-radius: 10px;
-    width: 500px ;
-    display: inline;
+    border-radius: var(--border-radius);
+    width:100% ;
+    display: inline-block;
     margin-right: 20px;
 }
 nav ul li:hover{
@@ -64,31 +69,30 @@ section {
     font-family: var(--font-family-par);
     font-size: var(--font-size-med);
     color: var(--text-color);
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    padding: var(--padding-large);
+    margin: var(--padding-med);
+    box-shadow:var(--box-shadow);
+    border-radius: var(--border-radius);
+    
 }
 #about
 {
    
     background-color: #7e4a3591;
     text-align:  center;
-    padding:20px;
-    
 
 }
 #projects 
 {
     background-color: #7e4a3591;
     text-align:  center;
-    padding: 20px;
+
 }
 #contact
 {
     background-color: #7e4a3591;
     text-align:  center;
-    padding: 20px;
+    margin-bottom: 20px;
 }
 footer {
     background-color: #333;
@@ -96,26 +100,36 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 5px;
-    margin: 0px;
+    margin-top: 20px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
 /* Media Queries for Mobile Devices */
-@media only screen and (max-width: 600px) {
-    header, footer {
-        padding: 10px;
+@media only screen and (max-width: 768px) {
+    header{
+        font-size: 30px;
+        padding: var(--padding-med);
+    
     }
+    nav ul{
+        flex-direction: column;
 
+    }
     nav ul li {
-        display: block;
-        text-align: center;
+      
         margin: 5px 0;
+        width:100%;
+
     }
 
     section {
-        padding: 10px;
+        padding: var(--padding-med);
         margin: 10px;
+    }
+    footer{
+        padding:var(--padding-med);
+       
     }
 }
