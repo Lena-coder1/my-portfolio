@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
 
@@ -53,6 +54,35 @@
         <h2>Contact Me</h2>
         <p>In the future, this will be a contact form. For now, just leave this as a placeholder.</p>
     </section>
+    <form>
+        <form action="#" method="POST">
+        
+            <div id="firstName">
+                <label for="firstName">First Name*:</label> 
+                <input type="text" id="firstName" name="firstName" required><br>
+           </div>
+    
+            <div id="lastName">
+                <label for="lastName">Last Name*:</label>
+                <input type="text" id="lastName" name="lastName" required><br>
+           </div> 
+            
+            <div id="email">
+                <label for="email">Email*:</label>
+                <input type="text" id="email" name="email" required><br>
+            </div>
+
+            <div id=" message">
+                <label for=" message"> Message:</label>
+                <input type="text" id="message" name="message" required><br>
+            </div>
+            
+        
+            <button type="reset" id="reset">Reset</button>
+            <button type="submit" id="submit">Submit</button>
+                
+    </form>
+
      
     <!-- Footer Section -->
     <footer>
