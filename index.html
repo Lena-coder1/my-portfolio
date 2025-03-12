@@ -57,28 +57,33 @@
     <form>
         <form action="#" method="POST">
         
-            <div id="firstName">
-                <label for="firstName">First Name*:</label> 
-                <input type="text" id="firstName" name="firstName" required><br>
-           </div>
-    
-            <div id="lastName">
-                <label for="lastName">Last Name*:</label>
-                <input type="text" id="lastName" name="lastName" required><br>
+            <div id="Name">
+                <label for="firstName">Full Name*:</label> 
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required><br>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" ><br>
+                <span class="validity"></span>
            </div> 
             
             <div id="email">
                 <label for="email">Email*:</label>
-                <input type="text" id="email" name="email" required><br>
+                <input type="text" id="email" name="email" placeholder="example@mail.com" required><br>
+                <span class="validity"></span>
+            </div>
+            
+            <div id="subject">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="subject"><br>
+                <span class="validity"></span>
             </div>
 
             <div id=" message">
-                <label for=" message"> Message:</label>
-                <input type="text" id="message" name="message" required><br>
+                <label for=" message"> Message:</label><br>
+                <textarea id="message" name="message" placeholder="Please enter you meessage here" rows="10" spellcheck="true"></textarea>
+                <span class="validity"></span>
             </div>
             
         
-            <button type="reset" id="reset">Reset</button>
+          
             <button type="submit" id="submit">Submit</button>
                 
     </form>
@@ -90,3 +95,5 @@
     </footer>
 </body>
 </html>
+
+
