@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const subjectValue = subjectInput.value.trim();
         const messageValue = messageInput.value.trim();
 
-        // Check if all fields are filled
+        
         if (firstNameValue === "" || lastNameValue === "" || emailValue === "" || subjectValue === "" || messageValue === "") {
             event.preventDefault();
             return;
         }
 
-        // Validate email format
+        
         if (!isValidEmail(emailValue)) {
             event.preventDefault();
             return;
@@ -29,8 +29,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Email validation function
+    
     function isValidEmail(email) {
         return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const projectButtons = document.querySelectorAll(".toggleDetails");
+
+    projectButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const projectDetails = this.nextElementSibling;
+
+            if (projectDetails.style.display === "block") {
+                projectDetails.style.display = "none";
+                this.textContent = "View Details";
+            } else {
+                projectDetails.style.display = "block";
+                this.textContent = "Hide Details";
+            }
+        });
+    });
 });
