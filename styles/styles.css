@@ -4,9 +4,7 @@
     --text-color: #e9e6f2;
     --background-color: #186961;
     --accent-color: hsl(302, 13%, 46%);
-    --nav-bg-color: #f4f4f4;
-    --nav-text-color: #333;
-    --nav-hover-color: #ddd;
+
 
     --box-shadow-header: 0 4px 8px rgba(0, 0, 0, 0.2);
     --box-shadow-par: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -34,6 +32,62 @@ body {
     display: flex;
     flex-direction: column;
 }
+.home-container {
+    display: flex;
+    min-height: calc(100vh - 200px);
+    flex: 1;
+    align-items: center;
+    padding: 0 var(--padding-large);
+}
+
+.welcome-content {
+    flex: 1;
+    padding-right: var(--padding-large);
+    max-width: 60%;
+}
+
+.profile-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.profile-img {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-par);
+    border: 3px solid var(--secondary-color);
+}
+
+.intro-text {
+    font-size: var(--font-size-med);
+    margin-bottom: var(--padding-med);
+    color: var(--text-color);
+}
+
+.home-links {
+    display: flex;
+    gap: var(--padding-med);
+    margin-top: var(--padding-large);
+}
+
+.content-link {
+    display: inline-block;
+    padding: var(--padding-med);
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.content-link:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
 
 /* Header Styles */
 header {
@@ -60,11 +114,7 @@ header {
 }
 
 /* Homepage Layout */
-.home-container {
-    display: flex;
-    min-height: calc(100vh - 200px); 
-    flex: 1;
-}
+
 
 .profile-section {
     flex: 1;
@@ -244,7 +294,28 @@ footer {
 @media only screen and (max-width: 768px) {
     .home-container {
         flex-direction: column;
+        padding: var(--padding-med);
     }
+    
+    .welcome-content {
+        max-width: 100%;
+        padding-right: 0;
+        margin-bottom: var(--padding-large);
+        order: -1;
+    }
+    
+    .profile-section {
+        justify-content: center;
+    }
+    
+    .profile-img {
+        max-height: 50vh;
+    }
+    
+    .home-links {
+        flex-direction: column;
+    }
+
     
     .side-nav {
         width: 100%;
