@@ -319,7 +319,7 @@ footer {
 .footer-content{
     font-size: var(--font-size-small);
     color: var(--text-color);
-    margin: 2px;
+    margin:2px;
 }
 
 /* Responsive Design */
