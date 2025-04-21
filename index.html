@@ -4,109 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/script.js"></script>
+    
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+   
 </head>
 <body>
 
     <!-- Header Section -->
-    <header>
+    <header class="home-header">
         <h1>Lena Mukhtar</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p> Hi, my name is Lena I am an active and determined individual who is currently in my first year of computer programming. 
-            With a passion for both technology and fitness, I like to balance studying with an active lifestyle that includes running,
-            climbing, and cycling. When I am not coding and solving programming challenges, I can be found running through trails, 
-            scaling climbing walls, or cycling long distances. Being dedicated to fitness not only keeps me physically strong but also
-            helps me stay focused and disciplined in my academic journey.
-            </p>
-            <br>
-            <p>
-            As a first-year programming student, I am eager to develop my coding skills and explore new technologies. My ability to
-            tackle physical challenges with determination and persistence mirrors my approach to problem-solving and 
-            continuous improvement.
-            </p>
-            <br>
-            <p>
-            By combining my love for sports and programming, I am on a journey to push both mental 
-            and physical limits, striving for success in both the digital and real world. </p>
-    </section>
+    <main class="home-container">
+        <!-- Welcome Content Section (now on left) -->
+        <section class="welcome-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p class="intro-text">Hello! I'm Lena, a passionate developer.</p>
+            <p>This is my personal space where I showcase my work and share my journey.</p>
+            <nav class="home-links">
+                <a href="about.html" class="content-link">Learn More About Me</a>
+                <a href="projects.html" class="content-link">View My Projects</a>
+                <a href="contact.html" class="content-link">Contact me</a>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1: Registration Form</h3>
-            <button class="toggleDetails">View Details</button>
-            <div class="projectDetails">
-                <p>The registration form is a project I worked on to create a user-friendly form.</p>
-                <a href="https://lena-coder1.github.io/accessible-registration/" target="_blank" class="projectLink">Visit Project</a>
-            </div>
-        </div>
+            </nav>
+        </section>
 
-        <div class="project">
-            <h3>Project 2: Interactive Quiz</h3>
-            <button class="toggleDetails">View Details</button>
-            <div class="projectDetails">
-                <p>The quiz demonstrates different types of input fields in an interactive way.</p>
-                <a href="https://lena-coder1.github.io/interactive-quiz/" target="_blank" class="projectLink">Visit Project</a>
-            </div>
-        </div>
-        
-    </section>
+        <!-- Image Section (now on right) -->
+        <section class="profile-section">
+            <img src="assets/profile-img.jpg" alt="Profile image" class="profile-img">
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        
-        <form action= "mailto:lena.mukhtar@gmail.com" method="post" id ="contactInfo">
-        
-            <div id="Name">
-                <label for="firstName">Full Name:</label> 
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-                <span class="validity"></span>
-           </div> 
-            
-            <div id="email">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-                <span class="validity"></span>
-            </div>
-            
-            <div id="subject">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="subject">
-                <span class="validity"></span>
-            </div>
-
-            <div id="message">
-                <label for="message"> Message:</label>
-                <textarea id="message" name="message" placeholder="Please enter your message here" rows="10" spellcheck="true"></textarea>
-                <span class="validity"></span>
-            </div>
-            
-        
-          
-            <button type="submit" id="submit">Submit Message</button>
-          
-                
-        </form>
-
-    </section>
-    
-     
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Lena Mukhtar</p>
