@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/script.js"></script>
+    
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+   
 </head>
 <body>
 
@@ -15,9 +18,9 @@
         <h1>Lena Mukhtar</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a><b>About</b></a></li>
+                <li><a href="projects.html" id="highlight">Projects</a></li>
+                <li><a href="contact.html" id="highlight">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -43,68 +46,6 @@
             and physical limits, striving for success in both the digital and real world. </p>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1: Registration Form</h3>
-            <button class="toggleDetails">View Details</button>
-            <div class="projectDetails">
-                <p>The registration form is a project I worked on to create a user-friendly form.</p>
-                <a href="https://lena-coder1.github.io/accessible-registration/" target="_blank" class="projectLink">Visit Project</a>
-            </div>
-        </div>
-
-        <div class="project">
-            <h3>Project 2: Interactive Quiz</h3>
-            <button class="toggleDetails">View Details</button>
-            <div class="projectDetails">
-                <p>The quiz demonstrates different types of input fields in an interactive way.</p>
-                <a href="https://lena-coder1.github.io/interactive-quiz/" target="_blank" class="projectLink">Visit Project</a>
-            </div>
-        </div>
-        
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        
-        <form action= "mailto:lena.mukhtar@gmail.com" method="post" id ="contactInfo">
-        
-            <div id="Name">
-                <label for="firstName">Full Name:</label> 
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-                <span class="validity"></span>
-           </div> 
-            
-            <div id="email">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-                <span class="validity"></span>
-            </div>
-            
-            <div id="subject">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="subject">
-                <span class="validity"></span>
-            </div>
-
-            <div id="message">
-                <label for="message"> Message:</label>
-                <textarea id="message" name="message" placeholder="Please enter your message here" rows="10" spellcheck="true"></textarea>
-                <span class="validity"></span>
-            </div>
-            
-        
-          
-            <button type="submit" id="submit">Submit Message</button>
-          
-                
-        </form>
-
-    </section>
     
      
     <!-- Footer Section -->
