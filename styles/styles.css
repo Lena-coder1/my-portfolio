@@ -276,7 +276,7 @@ footer {
 
 @media (max-width: 767px) {
     .page-header {
-        display: block; /
+        display: block;
         padding: var(--padding-med);
         height: auto; 
     }
