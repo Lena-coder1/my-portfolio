@@ -14,10 +14,9 @@
       <!-- Header Section -->
       <header class="page-header">
         <h1>Lena Mukhtar</h1>
-        <nav class="top-nav">
+        <nav class="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" >About</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
@@ -37,22 +36,17 @@
                 <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
                 <span class="validity"></span>
            </div> 
-            
-            <div id="email">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@mail.com" required>
-                <span class="validity"></span>
-            </div>
+          
             
             <div id="subject">
                 <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" placeholder="subject">
+                <input type="text" id="subj" name="subject" placeholder="subject">
                 <span class="validity"></span>
             </div>
 
             <div id="message">
                 <label for="message"> Message:</label>
-                <textarea id="message" name="message" placeholder="Please enter your message here" rows="10" spellcheck="true"></textarea>
+                <textarea id="msg" name="message" placeholder="Please enter your message here" rows="10" spellcheck="true"></textarea>
                 <span class="validity"></span>
             </div>
             
@@ -67,7 +61,8 @@
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 Lena Mukhtar</p>
+        <p class="footer-content">&copy; 2024 Lena Mukhtar</p>
+        
     </footer>
 
 </body>
