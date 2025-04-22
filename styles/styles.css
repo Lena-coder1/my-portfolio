@@ -21,6 +21,10 @@
     --border-radius: 10px;
 }
 
+
+
+
+/* Layout for all the pages */
 body {
     
     margin: 0;
@@ -33,6 +37,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+
+
+
+/* Layout for the home page  */
 .hero-home{
     background: linear-gradient(280deg, var(--main-color) 0%, var(--background-color) 100%);
     background-repeat: no-repeat;
@@ -94,7 +103,7 @@ body {
 
 
 
-/* Header Styles  for contacts and projects*/
+/* Global Layout for contact and project page */
 
 .page-header {
     height: 50px;
@@ -127,76 +136,64 @@ body {
     background-color: var(--accent-color);
 }
 
-/* Homepage Layout */
-
-
-.profile-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: var(--padding-large);
-}
-
-.profile-img {
-    max-width: 80%;
-    max-height: 60vh;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-par);
-    border: 3px solid var(--secondary-color);
-}
-
-.welcome-text {
-    font-size: var(--font-size-med);
-    margin-top: var(--padding-large);
-    color: var(--text-color);
-}
-
-
-
-
-.top-nav ul {
-    list-style: none;
-    display: flex;
-    gap: var(--padding-med);
-    margin: 0;
-    padding: 0;
-}
-
-.top-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    padding: var(--padding-med);
-    border-radius: var(--border-radius);
-    transition: all 0.3s ease;
-    font-size: var(--font-size-med);
-}
-
-.top-nav a:hover,
-.top-nav a.active {
-    background-color: var(--accent-color);
-}
-
-/* Page Content Styles */
-.page-container {
-    padding: var(--padding-large);
-    max-width: 1200px;
-    margin: 0 auto;
-    flex: 1;
-}
-
-#about, #projects, #contact {
+#projects, #contact {
     background: rgba(255, 255, 255, 0.1);
     padding: var(--padding-large);
     border-radius: var(--border-radius);
     margin: var(--padding-large) 0;
+    margin-bottom: 100px;
+    text-align: center;
 }
 
-#contact {
-    text-align: center;
-    margin-bottom: 100px;
+
+
+
+/*project page layout*/
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
 }
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 8px 20px;
+    background: transparent;
+    color: var(--text-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color);
+    color: var(--main-color);
+}
+
+
 
 /* Form Styles */
 form {
@@ -260,50 +257,11 @@ button:hover {
 .error {
     color: lightcoral;
 }
-/*project page css*/
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
 
-.project-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
 
-.project-card:hover {
-    transform: translateY(-10px);
-}
 
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
 
-.card-content {
-    padding: 1.5rem;
-}
 
-.btn-secondary {
-    display: inline-block;
-    padding: 8px 20px;
-    background: transparent;
-    color: var(--text-color);
-    border: 2px solid var(--secondary-color);
-    border-radius: 30px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-    background: var(--secondary-color);
-    color: var(--main-color);
-}
 /* Footer Styles */
 footer {
     background-color: var(--accent-color);
@@ -320,75 +278,4 @@ footer {
     font-size: var(--font-size-small);
     color: var(--text-color);
     margin:2px;
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    .home-container {
-        flex-direction: column;
-        padding: var(--padding-med);
-    }
-    
-    .welcome-content {
-        max-width: 100%;
-        padding-right: 0;
-        margin-bottom: var(--padding-large);
-        order: -1;
-    }
-    
-    .profile-section {
-        justify-content: center;
-    }
-    
-    .profile-img {
-        max-height: 50vh;
-    }
-    
-    .home-links {
-        flex-direction: column;
-    }
-
-    
-    .side-nav {
-        width: 100%;
-        order: -1;
-        padding: var(--padding-med);
-    }
-    
-    .page-header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .top-nav ul {
-        flex-direction: column;
-        gap: var(--padding-med);
-    }
-    
-    .profile-img {
-        max-width: 95%;
-    }
-    
-    header h1 {
-        font-size: 30px;
-    }
-    
-    section {
-        padding: var(--padding-med);
-        margin: 10px;
-    }
-    
-    form {
-        width: 90%;
-        padding: var(--padding-med);
-    }
-    
-    button {
-        font-size: var(--font-size-small);
-        padding: var(--padding-med);
-    }
-    
-    footer {
-        position: relative;
-    }
 }
