@@ -245,18 +245,7 @@ button:hover {
     cursor: pointer;
 }
 
-#formMessage {
-    margin-top: 10px;
-    font-size: var(--font-size-small);
-}
 
-.success {
-    color: lightgreen;
-}
-
-.error {
-    color: lightcoral;
-}
 
 
 
@@ -278,4 +267,96 @@ footer {
     font-size: var(--font-size-small);
     color: var(--text-color);
     margin:2px;
+}
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+    .page-header {
+        display: block; /
+        padding: var(--padding-med);
+        height: auto; 
+    }
+    
+    .page-header h1 {
+        display: inline-block; 
+        margin: 0;
+        padding: 10px 0; 
+    }
+    .nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        background-color: var(--main-color);
+    }
+  
+    .nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 0 0 0; 
+    }
+    
+    .nav li {
+        width: 100%;
+    }
+    
+    .nav a {
+        display: block;
+        padding: 12px var(--padding-med);
+        border-radius: 0;
+    }
+    
+    .page-header:hover .nav, .page-header:focus-within .nav {
+    max-height: 300px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-image{
+        max-width: 100%;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-hero {
+        width: 250px;
+        margin-top: 1.5rem;
+    }
+
+  
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+ 
+    form {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    input, textarea, button {
+        font-size: 16px;
+    }
+
+   
+    footer {
+        position: static; 
+    }
 }
